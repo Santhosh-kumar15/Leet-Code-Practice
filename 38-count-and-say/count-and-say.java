@@ -1,11 +1,10 @@
 class Solution {
     public String countAndSay(int n) {
         String curr = "1";
-        
         for(int k=1;k<n;k++)
         {
             String next = "";
-            int i = 0;
+            int i=0;
             while(i<curr.length())
             {
                 int count = 1;
