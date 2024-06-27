@@ -34,8 +34,7 @@ class Solution {
             }
             else if(s.charAt(i) == ')')
             {
-                sum = stack.peek() * sum;
-                stack.pop();
+                sum = stack.pop() * sum;
                 sum += stack.pop();
             }
         }
