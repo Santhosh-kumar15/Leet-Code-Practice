@@ -5,16 +5,13 @@ class Solution {
         {
             frequency.put(nums[i], frequency.getOrDefault(nums[i], 0) + 1);
         }
-        int max = 0;
-        int maxElement = -1;
+        int n = nums.length;
+        n = n / 2;      
         for(Map.Entry<Integer, Integer> entry: frequency.entrySet())
         {
-            if(max < entry.getValue())
-            {
-                max = entry.getValue();
-                maxElement = entry.getKey();
-            }
+           if(entry.getValue() > n)
+                return entry.getKey();
         }
-        return maxElement;
+        return 0;
     }
 }
