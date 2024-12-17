@@ -3,6 +3,8 @@ class Solution {
         int hLength = haystack.length();
         int nLength = needle.length();
 
+        if(nLength > hLength)
+            return -1;
         for(int i = 0; i <= hLength - nLength; i++)
         {
             if(haystack.substring(i, i + nLength).equals(needle))
