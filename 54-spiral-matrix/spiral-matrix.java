@@ -13,7 +13,7 @@ class Solution {
             //move to right
             for(int i = left; i <= right; i++)
             {
-                result.add(matrix[top][i]);
+                result.add(matrix[left][i]);
             }
             top++;
             // move to bottom
