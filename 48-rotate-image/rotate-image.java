@@ -11,21 +11,22 @@ class Solution {
             }
         }
 
-        // matrix reverse
+        // reverse the i'th row
         for(int i = 0; i < n; i++)
         {
             reverseRow(matrix[i]);
         }
     }
 
+    // method to swap
     public static void swap(int[][] matrix, int i, int j)
     {
         int temp = matrix[i][j];
         matrix[i][j] = matrix[j][i];
         matrix[j][i] = temp;
-      
     }
-    
+
+    // method to reverse elements in a row
     public static void reverseRow(int[] row)
     {
         int left = 0;
