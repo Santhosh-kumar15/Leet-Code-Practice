@@ -3,13 +3,21 @@ class Solution {
         int m = matrix.length;
         int n = matrix[0].length;
 
-        for(int i = 0; i < m; i++)
+        int l = 0;
+        int r = m * n - 1;
+
+        while(l <= r)
         {
-            for(int j = 0; j < n; j++)
-            {
-                if(matrix[i][j] == target)
-                    return true;
-            }
+            int mid = l + (r - l) /2;
+            int row = mid / n;
+            int col = mid % n;
+
+            if(matrix[row][col] == target)
+                return true;
+            else if(matrix[row][col] < target)
+                l = mid + 1;
+            else
+                r = mid - 1;
         }
         return false;
     }
