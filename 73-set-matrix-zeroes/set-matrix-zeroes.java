@@ -2,10 +2,10 @@ class Solution {
     public void setZeroes(int[][] matrix) {
         int n = matrix.length;
         int m = matrix[0].length;
-        // row = matrix[...][0]
-        // col = matrix[0][...]
-        int col0 = 1;
+        // row = matrix[...][0];
+        // col = matrix[0][...];
 
+        int col0 = 1;
         for(int i = 0; i < n; i++)
         {
             for(int j = 0; j < m; j++)
@@ -31,9 +31,7 @@ class Solution {
                 if(matrix[i][j] != 0)
                 {
                     if(matrix[i][0] == 0 || matrix[0][j] == 0)
-                    {
                         matrix[i][j] = 0;
-                    }
                 }
             }
         }
@@ -51,6 +49,5 @@ class Solution {
                 matrix[i][0] = 0;
             }
         }
-
     }
 }
